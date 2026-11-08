@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Wedding Register | Ola &amp; Tayo</title>
+<meta name="description" content="Wedding gift wishlist for Olamide Jumoke &amp; Toluwani Temitayo. #OlaTayo2026">
+<meta property="og:title" content="Wedding Register | Olamide &amp; Toluwani">
+<meta property="og:description" content="A wishlist of items to help us build our new home. Saturday, 14 November 2026, Ibadan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://olatayo2026.netlify.app/registry.html">
+<meta property="og:image" content="https://olatayo2026.netlify.app/photos/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="photos/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+:root {
+  --bg: #FFFFFF;
+  --band: #FFFFFF;
+  --champagne: #EBD5C0;
+  --blush: #FADFE6;
+  --blush-soft: #FFF6F9;
+  --fuchsia: #B5135F;
+  --fuchsia-ink: #8F0E4A;
+  --emerald: #0A7A55;
+  --olive: #727F2E;
+  --olive-tint: #F1F4E3;
+  --sage-ink: var(--emerald);
+  --fg: #3A2F2B;
+  --fg-soft: #6B5C55;
+  --line: #E8D9CD;
+  --card: #FFFFFF;
+  --on-accent: #FFFFFF;
+  color-scheme: light;
+  --serif: "Instrument Serif", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--sans); font-size: 17px; line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+img, svg { max-width: 100%; }
+a { color: var(--fuchsia-ink); }
+:focus-visible { outline: 3px solid var(--fuchsia); outline-offset: 3px; border-radius: 4px; }
+
+.wrap {
+  width: 100%; max-width: 1040px; margin-inline: auto;
+  padding-left: max(18px, env(safe-area-inset-left, 0px));
+  padding-right: max(18px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); }
+h2 { font-size: clamp(2rem, 6vw, 3rem); }
+h3 { font-size: 1.6rem; }
+p { margin: 0; }
+.eyebrow {
+  font-size: .78rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--sage-ink); margin-bottom: 14px;
+}
+.eyebrow::before { content: ""; display: inline-block; width: 28px; height: 2px; background: var(--olive); vertical-align: middle; margin-right: 12px; }
+.lede { max-width: 64ch; color: var(--fg-soft); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 50px; padding: 12px 24px; border-radius: 999px;
+  font: 600 .98rem var(--sans); text-decoration: none; cursor: pointer;
+  border: 2px solid var(--fuchsia); background: var(--fuchsia); color: var(--on-accent);
+}
+.btn:hover { background: var(--fuchsia-ink); border-color: var(--fuchsia-ink); }
+.btn.ghost { background: transparent; color: var(--fuchsia-ink); }
+.btn.ghost:hover { background: var(--blush); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+/* Header */
+header.top {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
+.logo-link { display: inline-flex; align-items: center; text-decoration: none; }
+.site-logo { height: 46px; width: auto; max-width: 140px; object-fit: contain; display: block; }
+.back-link {
+  font-weight: 600; font-size: .95rem; text-decoration: none; color: var(--fuchsia-ink);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* Main register content */
+main { padding-block: 56px 72px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+.gift-intro { max-width: 64ch; display: flex; flex-direction: column; gap: 16px; margin-top: 18px; font-size: 1.08rem; }
+
+.gifts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 16px; margin-top: 38px; }
+.gift { display: flex; flex-direction: column; gap: 14px; padding: 22px; transition: transform .2s ease, box-shadow .2s ease; }
+.gift:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.gift .ico { width: 72px; height: 72px; border-radius: 50%; background: var(--olive-tint); display: grid; place-items: center; color: var(--emerald); }
+.gift svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.gift .name { font-weight: 600; font-size: 1.02rem; }
+.gift .price { font-family: var(--serif); font-size: 1.7rem; font-variant-numeric: tabular-nums; margin-top: auto; color: var(--fuchsia-ink); }
+
+/* Bank accounts */
+.give { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--line); }
+.give h2 { font-size: 2.2rem; }
+.give-sub { color: var(--fg-soft); margin-top: 8px; }
+.banks { list-style: none; margin: 24px 0 0; padding: 0; border-top: 2px solid var(--emerald); }
+.bank-row { display: grid; gap: 18px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.bank-id, .bank-num { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; }
+.bank-name { font-family: var(--serif); font-size: 2rem; line-height: 1.1; margin-bottom: 10px; }
+.fld { font-size: .75rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--sage-ink); }
+.acct-name { font-size: 1.15rem; font-weight: 500; }
+.bank-num { gap: 4px; }
+.bank-num .num { font-size: 1.9rem; font-weight: 600; letter-spacing: .06em; font-variant-numeric: tabular-nums; user-select: all; margin-bottom: 10px; }
+.copy { min-height: 48px; padding: 8px 20px; font-size: .95rem; }
+.copy.done { background: var(--sage-ink); border-color: var(--sage-ink); color: var(--bg); }
+.bank-num .copy { width: 100%; }
+@media (min-width: 760px) {
+  .bank-row { grid-template-columns: 1fr 1fr; align-items: end; gap: 40px; }
+  .bank-num .copy { width: auto; }
+}
+.note { margin-top: 16px; color: var(--fg-soft); min-height: 24px; }
+
+footer { padding-block: 44px 56px; text-align: center; background: var(--bg); border-top: 3px solid var(--fuchsia); }
+footer .footer-logo { height: 92px; width: auto; max-width: 220px; object-fit: contain; display: inline-block; margin-bottom: 10px; }
+footer p { margin-top: 8px; color: var(--fg-soft); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo-link" href="index.html" aria-label="Olamide and Toluwani, home">
+      <img class="site-logo" src="photos/logo.png" alt="O &amp; T - #THEOLATAYOUNION26">
+    </a>
+    <a class="back-link" href="index.html">&larr; Back to Wedding Website</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">Wedding Register</p>
+    <h1>A Gift for Our New Home</h1>
+    <div class="gift-intro">
+      <p>Your presence at our celebration and in our lives is the biggest gift, and that means so much to us.</p>
+      <p>As we begin this new chapter together, we have put together a wishlist of items that would help us build our home. The list is simply for inspiration; there is no need to select or reserve any item.</p>
+      <p>We are unable to accept physical gifts. Monetary gifts would be most appreciated, and you are welcome to contribute whole or parts of the equivalent value of any item towards our new home.</p>
+    </div>
+
+    <div class="gifts" id="giftList"></div>
+
+    <div class="give">
+      <h2>Send a Monetary Gift</h2>
+      <p class="give-sub">Contributions can be sent directly to either account below.</p>
+      <ul class="banks">
+        <li class="bank-row">
+          <div class="bank-id">
+            <span class="bank-name">Moniepoint</span>
+            <span class="fld">Account name</span>
+            <span class="acct-name">Toluwani Ajani</span>
+          </div>
+          <div class="bank-num">
+            <span class="fld">Account number</span>
+            <span class="num" id="num1">8117141275</span>
+            <button class="btn copy" type="button" data-target="num1" aria-label="Copy Moniepoint account number">Copy Account Number</button>
+          </div>
+        </li>
+        <li class="bank-row">
+          <div class="bank-id">
+            <span class="bank-name">OPay</span>
+            <span class="fld">Account name</span>
+            <span class="acct-name">Olamide Adeagbo</span>
+          </div>
+          <div class="bank-num">
+            <span class="fld">Account number</span>
+            <span class="num" id="num2">8067984242</span>
+            <button class="btn copy" type="button" data-target="num2" aria-label="Copy OPay account number">Copy Account Number</button>
+          </div>
+        </li>
+      </ul>
+      <p class="note" id="copyStatus" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="btn-row" style="margin-top: 48px;">
+      <a class="btn" href="index.html">&larr; Return to Wedding Website</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <a class="logo-link footer-logo-link" href="index.html" aria-label="Back to top">
+    <img class="footer-logo" src="photos/logo.png" alt="O &amp; T - #THEOLATAYOUNION26">
+  </a>
+  <p>Olamide Jumoke &amp; Toluwani Temitayo &middot; 14 November 2026 &middot; #OlaTayo2026</p>
+</footer>
+
+<script>
+(function () {
+  /* ---------- Wishlist Items ---------- */
+  var icons = {
+    fridge: '<rect x="14" y="5" width="20" height="38" rx="3"/><path d="M14 22h20M18 11v6M18 27v6"/>',
+    airfryer: '<rect x="9" y="12" width="26" height="28" rx="7"/><path d="M35 22h5a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-5M9 22h26"/><circle cx="22" cy="31" r="3"/>',
+    microwave: '<rect x="5" y="12" width="38" height="24" rx="3"/><rect x="10" y="17" width="20" height="14" rx="2"/><path d="M36 18h3M36 24h3M36 30h3"/>',
+    cutlery: '<path d="M15 5v12a4 4 0 0 0 4 4v22M11 5v10M19 5v10M33 43V5c-5 3-6 9-6 15 0 3 2 5 6 5"/>',
+    chair: '<path d="M16 6h16l-2 16H18zM14 24h20v5H14zM24 29v9M14 41l10-3 10 3"/>',
+    power: '<rect x="8" y="12" width="32" height="26" rx="4"/><path d="M21 17l-5 9h7l-3 8 8-11h-7l3-6zM14 8h4M30 8h4"/>',
+    treadmill: '<path d="M8 36h32M12 36l-3 6M36 36l3 6M14 28h22a2 2 0 0 1 2 2v2H12v-2a2 2 0 0 1 2-2zM33 28V8M33 8h-6"/>',
+    vacation: '<circle cx="32" cy="14" r="6"/><path d="M5 34c4-4 8-4 12 0s8 4 12 0 8-4 14 0M5 41c4-4 8-4 12 0s8 4 12 0 8-4 14 0M10 27l9-9 4 4-9 9z"/>',
+    fan: '<circle cx="24" cy="18" r="13"/><circle cx="24" cy="18" r="2.5"/><path d="M24 15.5C22 9 24 7 26 7s3 3-2 8.5zM26.4 19c6.500-1.500 8.500.500 8.500 2.500s-3 3-8.500-2.500zM22 19.800C17 25 14.500 24 13.500 22.200s1-3.800 8.500-2.400zM24 31v8M16 42h16"/>'
+  };
+  var items = [
+    ['Double-door refrigerator', '450,000', 'fridge'],
+    ['Air fryer', '50,000', 'airfryer'],
+    ['Microwave', '65,000', 'microwave'],
+    ['Cutlery set', '20,000', 'cutlery'],
+    ['Ergonomic chair', '200,000', 'chair'],
+    ['itel Power Tank 1000W', '600,000', 'power'],
+    ['Walking pad treadmill', '270,000', 'treadmill'],
+    ["Couples' vacation / resort stay", '500,000', 'vacation'],
+    ['Rechargeable mist fan', '145,000', 'fan']
+  ];
+  var list = document.getElementById('giftList');
+  items.forEach(function (it) {
+    var d = document.createElement('div');
+    d.className = 'card gift';
+    d.innerHTML = '<div class="ico" aria-hidden="true"><svg viewBox="0 0 48 48">' + icons[it[2]] + '</svg></div>' +
+      '<div class="name"></div><div class="price">&#8358;' + it[1] + '</div>';
+    d.querySelector('.name').textContent = it[0];
+    list.appendChild(d);
+  });
+
+  /* ---------- Copy Buttons ---------- */
+  var status = document.getElementById('copyStatus');
+  function selectText(el) {
+    try {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    } catch (e) {}
+  }
+  function flash(btn, ok, msg) {
+    var old = btn.dataset.label || btn.textContent;
+    btn.dataset.label = old;
+    btn.textContent = ok ? 'Copied \u2713' : 'Press and hold to copy';
+    btn.classList.toggle('done', ok);
+    status.textContent = msg;
+    setTimeout(function () { btn.textContent = old; btn.classList.remove('done'); }, 2200);
+  }
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = btn.dataset.target ? document.getElementById(btn.dataset.target) : null;
+      var text = el ? el.textContent.trim() : btn.dataset.targetText;
+      var done = function () { flash(btn, true, 'Number ' + text + ' copied.'); };
+      var fail = function () { if (el) selectText(el); flash(btn, false, 'Number selected. Press and hold it to copy.'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fail);
+      } else { fail(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

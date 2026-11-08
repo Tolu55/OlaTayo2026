@@ -439,12 +439,9 @@ footer p { margin-top: 8px; color: var(--fg-soft); }
       <p class="eyebrow">Gift Wishlist</p>
       <h2>A Gift for Our New Home</h2>
       <div class="gift-intro">
-        <p>Your presence at our celebration means so much to us.</p>
-        <p>As we begin this new chapter, we have put together a wishlist of items that would help us build our home. The list is simply for inspiration; there is no need to select or reserve any item.</p>
-        <p>We are unable to accept physical gifts. Monetary gifts would be most appreciated, and you are welcome to contribute whole or parts of the equivalent value of any item towards our new home.</p>
+        <p>Your presence at our celebration and in our lives is the biggest gift, and that means so much to us.</p>
+        <p>We are unable to accept physical gifts. Monetary gifts would be most appreciated.</p>
       </div>
-
-      <div class="gifts" id="giftList"></div>
 
       <div class="give">
         <h3>Monetary gifts</h3>
@@ -477,6 +474,9 @@ footer p { margin-top: 8px; color: var(--fg-soft); }
         </ul>
       </div>
       <p class="note" id="copyStatus" role="status" aria-live="polite"></p>
+      <div class="btn-row" style="margin-top:28px;">
+        <a class="btn ghost" href="registry.html">See Wedding Register &rarr;</a>
+      </div>
     </div>
   </section>
   <section class="band" id="colours">
@@ -502,7 +502,7 @@ footer p { margin-top: 8px; color: var(--fg-soft); }
         <details><summary>Can I bring my children?</summary><p>Yes! Children are welcome. We'd be delighted to have them celebrate with us.</p></details>
         <details><summary>Is there parking available?</summary><p>Parking is available within the Lead City University premises. Guests can drive down into the University premises and park close to the Conference Centre.</p></details>
         <details><summary>Can I take photographs?</summary><p>Of course! Feel free to take photographs and capture lovely memories of the day.</p></details>
-        <details><summary>Are physical gifts accepted?</summary><p>We appreciate the thought, but we are unable to accept physical gifts. Monetary gifts would be most appreciated. Please see our <a href="#gifts">Gift Wishlist</a> section for details.</p></details>
+        <details><summary>Are physical gifts accepted?</summary><p>We appreciate the thought, but we are unable to accept physical gifts. Monetary gifts would be most appreciated. Please see our <a href="#gifts">Gift Wishlist</a> section or view our full <a href="registry.html">Wedding Register</a>.</p></details>
         <details><summary>Who can I contact if I need help finding the venue?</summary><p>Please contact Flora on 08117141275 for directions or any assistance.</p></details>
       </div>
     </div>
@@ -551,38 +551,6 @@ footer p { margin-top: 8px; color: var(--fg-soft); }
   menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
 
-  /* ---------- Wishlist ---------- */
-  var icons = {
-    fridge: '<rect x="14" y="5" width="20" height="38" rx="3"/><path d="M14 22h20M18 11v6M18 27v6"/>',
-    airfryer: '<rect x="9" y="12" width="26" height="28" rx="7"/><path d="M35 22h5a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-5M9 22h26"/><circle cx="22" cy="31" r="3"/>',
-    microwave: '<rect x="5" y="12" width="38" height="24" rx="3"/><rect x="10" y="17" width="20" height="14" rx="2"/><path d="M36 18h3M36 24h3M36 30h3"/>',
-    cutlery: '<path d="M15 5v12a4 4 0 0 0 4 4v22M11 5v10M19 5v10M33 43V5c-5 3-6 9-6 15 0 3 2 5 6 5"/>',
-    chair: '<path d="M16 6h16l-2 16H18zM14 24h20v5H14zM24 29v9M14 41l10-3 10 3"/>',
-    power: '<rect x="8" y="12" width="32" height="26" rx="4"/><path d="M21 17l-5 9h7l-3 8 8-11h-7l3-6zM14 8h4M30 8h4"/>',
-    treadmill: '<path d="M8 36h32M12 36l-3 6M36 36l3 6M14 28h22a2 2 0 0 1 2 2v2H12v-2a2 2 0 0 1 2-2zM33 28V8M33 8h-6"/>',
-    vacation: '<circle cx="32" cy="14" r="6"/><path d="M5 34c4-4 8-4 12 0s8 4 12 0 8-4 14 0M5 41c4-4 8-4 12 0s8 4 12 0 8-4 14 0M10 27l9-9 4 4-9 9z"/>',
-    fan: '<circle cx="24" cy="18" r="13"/><circle cx="24" cy="18" r="2.5"/><path d="M24 15.5C22 9 24 7 26 7s3 3-2 8.5zM26.4 19c6.500-1.500 8.500.500 8.500 2.500s-3 3-8.500-2.500zM22 19.800C17 25 14.500 24 13.500 22.200s1-3.800 8.500-2.400zM24 31v8M16 42h16"/>'
-  };
-  var items = [
-    ['Double-door refrigerator', '450,000', 'fridge'],
-    ['Air fryer', '50,000', 'airfryer'],
-    ['Microwave', '65,000', 'microwave'],
-    ['Cutlery set', '20,000', 'cutlery'],
-    ['Ergonomic chair', '200,000', 'chair'],
-    ['itel Power Tank 1000W', '600,000', 'power'],
-    ['Walking pad treadmill', '270,000', 'treadmill'],
-    ["Couples' vacation / resort stay", '500,000', 'vacation'],
-    ['Rechargeable mist fan', '145,000', 'fan']
-  ];
-  var list = document.getElementById('giftList');
-  items.forEach(function (it) {
-    var d = document.createElement('div');
-    d.className = 'card gift';
-    d.innerHTML = '<div class="ico" aria-hidden="true"><svg viewBox="0 0 48 48">' + icons[it[2]] + '</svg></div>' +
-      '<div class="name"></div><div class="price">&#8358;' + it[1] + '</div>';
-    d.querySelector('.name').textContent = it[0];
-    list.appendChild(d);
-  });
 
   /* ---------- Copy buttons ---------- */
   var status = document.getElementById('copyStatus');
