@@ -303,7 +303,10 @@ footer p { margin-top: 8px; color: var(--fg-soft); }
 
 <main>
   <section class="hero" id="home">
-    <div class="hero-bg" id="heroPhoto"><div class="fallback" aria-hidden="true"></div></div>
+    <div class="hero-bg" id="heroPhoto">
+      <img src="photos/photo-01.jpg" alt="Olamide Jumoke &amp; Toluwani Temitayo" onload="var f=this.nextElementSibling;if(f)f.hidden=true;" onerror="this.hidden=true">
+      <div class="fallback" aria-hidden="true"></div>
+    </div>
     <div class="wrap">
       <div class="content">
         <h1 class="names">Olamide Jumoke <span class="amp">&amp;</span> Toluwani Temitayo</h1>
@@ -368,7 +371,17 @@ footer p { margin-top: 8px; color: var(--fg-soft); }
     <div class="wrap">
       <p class="eyebrow">Wedding Gallery</p>
       <h2>Moments of Ola &amp; Tayo</h2>
-      <div class="grid" id="grid" aria-label="Wedding gallery"></div>
+      <div class="grid" id="grid" aria-label="Wedding gallery">
+        <button type="button" aria-label="View photo 1 larger" data-num="1"><img src="photos/photo-01.jpg" alt="Olamide and Toluwani, wedding photograph 1" loading="lazy" decoding="async"></button>
+        <button type="button" aria-label="View photo 2 larger" data-num="2"><img src="photos/photo-02.jpg" alt="Olamide and Toluwani, wedding photograph 2" loading="lazy" decoding="async"></button>
+        <button type="button" aria-label="View photo 3 larger" data-num="3"><img src="photos/photo-03.jpg" alt="Olamide and Toluwani, wedding photograph 3" loading="lazy" decoding="async"></button>
+        <button type="button" aria-label="View photo 4 larger" data-num="4"><img src="photos/photo-04.jpg" alt="Olamide and Toluwani, wedding photograph 4" loading="lazy" decoding="async"></button>
+        <button type="button" aria-label="View photo 5 larger" data-num="5"><img src="photos/photo-05.jpg" alt="Olamide and Toluwani, wedding photograph 5" loading="lazy" decoding="async"></button>
+        <button type="button" aria-label="View photo 6 larger" data-num="6"><img src="photos/photo-06.jpg" alt="Olamide and Toluwani, wedding photograph 6" loading="lazy" decoding="async"></button>
+        <button type="button" aria-label="View photo 7 larger" data-num="7"><img src="photos/photo-07.jpg" alt="Olamide and Toluwani, wedding photograph 7" loading="lazy" decoding="async"></button>
+        <button type="button" aria-label="View photo 8 larger" data-num="8"><img src="photos/photo-08.jpg" alt="Olamide and Toluwani, wedding photograph 8" loading="lazy" decoding="async"></button>
+        <button type="button" aria-label="View photo 9 larger" data-num="9"><img src="photos/photo-09.jpg" alt="Olamide and Toluwani, wedding photograph 9" loading="lazy" decoding="async"></button>
+      </div>
       <p class="empty-note" id="galleryEmpty" hidden>Our wedding photographs will be shared here soon.</p>
     </div>
   </section>
@@ -596,70 +609,65 @@ footer p { margin-top: 8px; color: var(--fg-soft); }
   });
 
   /* ---------- Gallery + lightbox ---------- */
-  var COUNT = 9;
   var grid = document.getElementById('grid');
   var empty = document.getElementById('galleryEmpty');
-  var photos = [];     // successfully loaded {src, alt}
-  var pending = COUNT;
-  function src(i) { return 'photos/photo-' + (i < 10 ? '0' : '') + i + '.jpg'; }
-
-  function finish() {
-    pending--;
-    if (pending === 0 && photos.length === 0) { grid.hidden = true; empty.hidden = false; }
-  }
-  for (var i = 1; i <= COUNT; i++) {
-    (function (n) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.setAttribute('aria-label', 'View photo ' + n + ' larger');
-      var img = new Image();
-      img.alt = 'Olamide and Toluwani, wedding photograph ' + n;
-      img.loading = 'lazy'; img.decoding = 'async';
-      img.onload = function () {
-        photos.push(n);
-        btn.appendChild(img);
-        btn.dataset.num = n;
-        var siblings = Array.prototype.slice.call(grid.children);
-        var next = null;
-        for (var s = 0; s < siblings.length; s++) {
-          if (parseInt(siblings[s].dataset.num, 10) > n) { next = siblings[s]; break; }
-        }
-        if (next) { grid.insertBefore(btn, next); } else { grid.appendChild(btn); }
-        if (n === Math.min.apply(null, photos)) setHero(img.src, img.alt);
-        btn.addEventListener('click', function () { openLb(n); });
-        finish();
-      };
-      img.onerror = function () { finish(); };
-      img.src = src(n);
-    })(i);
-  }
-  function setHero(url, alt) {
-    var box = document.getElementById('heroPhoto');
-    var old = box.querySelector('img');
-    var im = old || document.createElement('img');
-    im.src = url; im.alt = alt;
-    if (!old) { box.insertBefore(im, box.firstChild); box.querySelector('.fallback').hidden = true; }
-  }
-
   var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCount = document.getElementById('lbCount');
   var cur = 0, opener = null;
-  function sorted() { return photos.slice().sort(function (a, b) { return a - b; }); }
-  function show(idx) {
-    var s = sorted(); if (!s.length) return;
-    cur = (idx + s.length) % s.length;
-    lbImg.src = src(s[cur]);
-    lbImg.alt = 'Olamide and Toluwani, wedding photograph ' + s[cur];
-    lbCount.textContent = (cur + 1) + ' of ' + s.length;
+
+  function getAvailablePhotos() {
+    var btns = grid.querySelectorAll('button');
+    var list = [];
+    for (var b = 0; b < btns.length; b++) {
+      var n = parseInt(btns[b].dataset.num, 10);
+      if (!isNaN(n)) list.push(n);
+    }
+    return list;
   }
+
+  function src(i) { return 'photos/photo-' + (i < 10 ? '0' : '') + i + '.jpg'; }
+
+  function show(idx) {
+    var photos = getAvailablePhotos();
+    if (!photos.length) return;
+    cur = (idx + photos.length) % photos.length;
+    var num = photos[cur];
+    lbImg.src = src(num);
+    lbImg.alt = 'Olamide and Toluwani, wedding photograph ' + num;
+    lbCount.textContent = (cur + 1) + ' of ' + photos.length;
+  }
+
   function openLb(n) {
+    var photos = getAvailablePhotos();
+    var idx = photos.indexOf(n);
+    if (idx === -1) idx = 0;
     opener = document.activeElement;
     lb.hidden = false; document.documentElement.style.overflow = 'hidden';
-    show(sorted().indexOf(n));
+    show(idx);
     document.getElementById('lbClose').focus();
   }
+
   function closeLb() {
     lb.hidden = true; document.documentElement.style.overflow = '';
     if (opener && opener.focus) opener.focus();
+  }
+
+  grid.addEventListener('click', function (e) {
+    var btn = e.target.closest('button');
+    if (!btn) return;
+    var n = parseInt(btn.dataset.num, 10);
+    if (!isNaN(n)) openLb(n);
+  });
+
+  var galleryImgs = grid.querySelectorAll('img');
+  for (var gi = 0; gi < galleryImgs.length; gi++) {
+    galleryImgs[gi].addEventListener('error', function () {
+      var btn = this.closest('button');
+      if (btn) btn.remove();
+      if (grid.querySelectorAll('button').length === 0) {
+        grid.hidden = true;
+        empty.hidden = false;
+      }
+    });
   }
   document.getElementById('lbClose').addEventListener('click', closeLb);
   document.getElementById('lbPrev').addEventListener('click', function () { show(cur - 1); });
