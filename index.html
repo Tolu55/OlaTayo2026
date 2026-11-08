@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Ola & Tayo Wedding</title>
+<meta name="description" content="Olamide Jumoke & Toluwani Temitayo are getting married on Saturday, 14 November 2026 in Ibadan. #OlaTayo2026">
+<meta property="og:title" content="Olamide & Toluwani | 14 November 2026">
+<meta property="og:description" content="Together with our families, we invite you to celebrate the beginning of our forever. Saturday, 14 November 2026, Ibadan.">
+<meta property="og:type" content="website">
+<!-- Replace the address below with your real Netlify address if you pick a different site name. -->
+<meta property="og:url" content="https://olatayo2026.netlify.app/">
+<meta property="og:image" content="https://olatayo2026.netlify.app/photos/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* Layout concept: a calm single column that opens out to two columns on larger screens.
+   Photograph first, names beneath it, then each section on its own tinted band. */
+:root {
+  --bg: #FFFFFF;
+  --band: #FFFFFF;        /* white base; champagne used only as a small accent */
+  --champagne: #EBD5C0;
+  --blush: #FADFE6;       /* baby pink / blush */
+  --blush-soft: #FFF6F9;
+  --fuchsia: #B5135F;     /* hot pink, deepened so white text stays readable */
+  --fuchsia-ink: #8F0E4A;
+  --emerald: #0A7A55;
+  --olive: #727F2E;
+  --olive-tint: #F1F4E3;
+  --sage-ink: var(--emerald);   /* small labels and numbered markers */
+  --fg: #3A2F2B;          /* muted brown */
+  --fg-soft: #6B5C55;
+  --line: #E8D9CD;
+  --card: #FFFFFF;
+  --on-accent: #FFFFFF;
+  color-scheme: light;
+  --serif: "Instrument Serif", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--sans); font-size: 17px; line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 60; background: var(--bg);
+}
+img, svg { max-width: 100%; }
+a { color: var(--fuchsia-ink); }
+:focus-visible { outline: 3px solid var(--fuchsia); outline-offset: 3px; border-radius: 4px; }
+
+.wrap {
+  width: 100%; max-width: 1040px; margin-inline: auto;
+  padding-left: max(18px, env(safe-area-inset-left, 0px));
+  padding-right: max(18px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(2.2rem, 7vw, 3.4rem); }
+h3 { font-size: 1.6rem; }
+p { margin: 0; }
+.eyebrow {
+  font-size: .78rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--sage-ink); margin-bottom: 14px;
+}
+section { padding-block: 72px; }
+.band { background: var(--band); }
+main > section + section { border-top: 1px solid var(--line); }
+.eyebrow::before { content: ""; display: inline-block; width: 28px; height: 2px; background: var(--olive); vertical-align: middle; margin-right: 12px; }
+.lede { max-width: 62ch; }
+.stack { display: flex; flex-direction: column; gap: 18px; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px; padding: 12px 26px; border-radius: 999px;
+  font: 600 1rem var(--sans); text-decoration: none; cursor: pointer;
+  border: 2px solid var(--fuchsia); background: var(--fuchsia); color: var(--on-accent);
+}
+.btn:hover { background: var(--fuchsia-ink); border-color: var(--fuchsia-ink); }
+.btn.ghost { background: transparent; color: var(--fuchsia-ink); }
+.btn.ghost:hover { background: var(--blush); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Header */
+header.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
+.mono { font-family: var(--serif); font-size: 1.7rem; text-decoration: none; color: var(--fg); letter-spacing: .02em; }
+.mono i { color: var(--fuchsia); }
+.menu-btn {
+  min-height: 48px; padding: 8px 18px; border-radius: 999px; background: transparent;
+  border: 1.5px solid var(--line); color: var(--fg); font: 600 .95rem var(--sans); cursor: pointer;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.menu-btn .bars { width: 18px; height: 12px; position: relative; display: inline-block; }
+.menu-btn .bars::before, .menu-btn .bars::after, .menu-btn .bars i {
+  content: ""; position: absolute; left: 0; right: 0; height: 2px; background: currentColor; border-radius: 2px;
+}
+.menu-btn .bars::before { top: 0; } .menu-btn .bars i { top: 5px; } .menu-btn .bars::after { bottom: 0; }
+nav.main { display: none; border-top: 1px solid var(--line); background: var(--bg); }
+nav.main.open { display: block; }
+nav.main ul { list-style: none; margin: 0; padding: 8px 0 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+nav.main a {
+  display: flex; align-items: center; min-height: 48px; text-decoration: none; color: var(--fg);
+  font-weight: 500; border-bottom: 1px solid var(--line);
+}
+nav.main a:hover { color: var(--fuchsia-ink); }
+@media (min-width: 1000px) {
+  .menu-btn { display: none; }
+  .top .wrap { max-width: 1240px; }
+  nav.main { display: block; border: 0; background: transparent; }
+  nav.main ul { display: flex; gap: 4px; padding: 0; }
+  nav.main a { min-height: 44px; padding: 0 10px; border: 0; font-size: .92rem; }
+}
+
+/* Hero: full-screen photograph with text over a dark scrim */
+.hero {
+  position: relative; isolation: isolate; overflow: hidden; color: #fff;
+  min-height: calc(100vh - 72px); min-height: calc(100svh - 72px);
+  display: flex; align-items: flex-end; padding-block: 0;
+  background: #2E1722;
+}
+.hero-bg { position: absolute; inset: 0; z-index: -2; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; max-width: none; }
+.hero-bg .fallback { position: absolute; inset: 0; background: linear-gradient(155deg, #8F0E4A 0%, #4B1530 55%, #0F4A37 100%); }
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(to top, rgba(18, 8, 13, .82) 0%, rgba(18, 8, 13, .55) 42%, rgba(18, 8, 13, .18) 75%, rgba(18, 8, 13, .30) 100%);
+}
+.hero .wrap { padding-block: 72px 56px; }
+.hero .content { max-width: 720px; }
+.names { font-size: clamp(2.8rem, 12vw, 6rem); letter-spacing: .01em; text-transform: uppercase; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+.names .amp { display: block; font-style: italic; text-transform: none; color: #FFB3D4; font-size: .62em; line-height: 1.2; }
+.hero .invite { margin-top: 22px; font-size: 1.12rem; max-width: 46ch; color: rgba(255,255,255,.92); display: flex; flex-direction: column; gap: 10px; }
+.hero .when { margin-top: 24px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+.hero .date { font-family: var(--serif); font-size: 1.8rem; }
+.hero .tag { color: #FFB3D4; font-weight: 600; letter-spacing: .04em; }
+.hero .btn-row { margin-top: 28px; }
+.hero .btn { border-color: #fff; background: #fff; color: var(--fuchsia-ink); }
+.hero .btn:hover { background: #FFE3EE; border-color: #FFE3EE; }
+.hero .btn.ghost { background: transparent; color: #fff; }
+.hero .btn.ghost:hover { background: rgba(255,255,255,.18); }
+.hero :focus-visible { outline-color: #fff; }
+
+/* Story */
+.story { max-width: 64ch; display: flex; flex-direction: column; gap: 20px; }
+.story .closing { font-family: var(--serif); font-size: 2rem; font-style: italic; color: var(--fuchsia-ink); margin-top: 6px; }
+
+/* Wedding details */
+.when-grid { display: grid; gap: 36px; margin-top: 34px; align-items: start; }
+.datebox { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
+.datebox .dow { font-size: .8rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--sage-ink); }
+.datebox .day { font-family: var(--serif); font-size: clamp(7rem, 30vw, 11rem); color: var(--fuchsia); line-height: .9; margin-block: 6px 4px; }
+.datebox .mon { font-family: var(--serif); font-size: 1.9rem; }
+.schedule { border-top: 2px solid var(--olive); }
+.slot { display: grid; grid-template-columns: minmax(104px, 150px) 1fr; gap: 6px 18px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.slot .time { font-family: var(--serif); font-size: 2rem; color: var(--fuchsia-ink); font-variant-numeric: tabular-nums; }
+.slot .what { font-weight: 600; font-size: 1.1rem; }
+.place { padding-top: 24px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.place .label { font-size: .78rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-ink); }
+.place .pname { font-family: var(--serif); font-size: 1.9rem; line-height: 1.15; }
+.place address { font-style: normal; color: var(--fg-soft); margin-bottom: 12px; }
+@media (min-width: 820px) { .when-grid { grid-template-columns: auto 1fr; gap: 72px; } }
+
+/* Colours */
+.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 22px 16px; margin-top: 34px; }
+.sw { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.sw .dot { width: 96px; height: 96px; border-radius: 50%; border: 1px solid var(--line); }
+.sw b { font-weight: 600; display: block; }
+.note { margin-top: 28px; color: var(--fg-soft); max-width: 60ch; }
+
+/* Directions */
+.routes { display: grid; gap: 16px; margin-top: 34px; }
+@media (min-width: 900px) { .routes { grid-template-columns: repeat(3, 1fr); } }
+.route h3 { color: var(--fuchsia-ink); margin-bottom: 14px; }
+.route ol { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 10px; }
+.route li::marker { color: var(--sage-ink); font-weight: 700; }
+.important { margin-top: 18px; background: var(--blush-soft); border: 1px solid var(--blush); border-radius: 14px; padding: 22px 24px; }
+.important b { color: var(--fuchsia-ink); }
+.coords { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.coords code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .95rem; background: var(--card); border: 1px solid var(--line); padding: 8px 12px; border-radius: 8px; user-select: all; }
+
+/* Gallery */
+.grid { columns: 2; column-gap: 12px; margin-top: 34px; }
+@media (min-width: 760px) { .grid { columns: 3; column-gap: 16px; } }
+.grid button {
+  display: block; width: 100%; margin: 0 0 12px; padding: 0; border: 0; background: var(--blush);
+  border-radius: 10px; overflow: hidden; cursor: zoom-in; break-inside: avoid;
+}
+@media (min-width: 760px) { .grid button { margin-bottom: 16px; } }
+.grid img { display: block; width: 100%; height: auto; transition: transform .35s ease; }
+.grid button:hover img { transform: scale(1.03); }
+.empty-note { margin-top: 28px; color: var(--fg-soft); }
+.lb {
+  position: fixed; inset: 0; z-index: 100; background: rgba(20, 12, 15, .94);
+  display: flex; align-items: center; justify-content: center;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+}
+.lb[hidden] { display: none; }
+.lb img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px; touch-action: pan-y; }
+.lb button {
+  position: absolute; width: 52px; height: 52px; border-radius: 50%; border: 0; cursor: pointer;
+  background: rgba(255,255,255,.16); color: #fff; font-size: 1.6rem; line-height: 1;
+}
+.lb button:hover { background: rgba(255,255,255,.3); }
+.lb .close { top: max(14px, env(safe-area-inset-top, 0px)); right: max(14px, env(safe-area-inset-right, 0px)); }
+.lb .prev { left: max(10px, env(safe-area-inset-left, 0px)); top: 50%; transform: translateY(-50%); }
+.lb .next { right: max(10px, env(safe-area-inset-right, 0px)); top: 50%; transform: translateY(-50%); }
+.lb .count { position: absolute; bottom: max(16px, env(safe-area-inset-bottom, 0px)); left: 0; right: 0; text-align: center; color: #fff; font-size: .9rem; }
+
+/* Gifts */
+.gifts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 14px; margin-top: 34px; }
+.gift { display: flex; flex-direction: column; gap: 14px; padding: 20px; }
+.gift .ico { width: 72px; height: 72px; border-radius: 50%; background: var(--olive-tint); display: grid; place-items: center; color: var(--emerald); }
+.gift svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.gift .name { font-weight: 600; }
+.gift .price { font-family: var(--serif); font-size: 1.6rem; font-variant-numeric: tabular-nums; margin-top: auto; }
+.copy { min-height: 48px; padding: 8px 20px; font-size: .95rem; }
+.copy.done { background: var(--sage-ink); border-color: var(--sage-ink); color: var(--bg); }
+.gift-intro { max-width: 62ch; display: flex; flex-direction: column; gap: 14px; margin-top: 18px; }
+
+.give { margin-top: 56px; }
+.give h3 { color: var(--fuchsia-ink); }
+.give-sub { color: var(--fg-soft); margin-top: 6px; }
+.banks { list-style: none; margin: 22px 0 0; padding: 0; border-top: 2px solid var(--emerald); }
+.bank-row { display: grid; gap: 18px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.bank-id, .bank-num { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; }
+.bank-name { font-family: var(--serif); font-size: 2rem; line-height: 1.1; margin-bottom: 10px; }
+.fld { font-size: .75rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--sage-ink); }
+.acct-name { font-size: 1.15rem; font-weight: 500; }
+.bank-num { gap: 4px; }
+.bank-num .num { font-size: 1.9rem; font-weight: 600; letter-spacing: .06em; font-variant-numeric: tabular-nums; user-select: all; margin-bottom: 10px; }
+.bank-num .copy { width: 100%; }
+@media (min-width: 760px) {
+  .bank-row { grid-template-columns: 1fr 1fr; align-items: end; gap: 40px; }
+  .bank-num .copy { width: auto; }
+}
+
+/* FAQ */
+.faq { max-width: 780px; margin-top: 34px; border-top: 1px solid var(--line); }
+details { border-bottom: 1px solid var(--line); }
+summary {
+  list-style: none; cursor: pointer; padding: 20px 44px 20px 0; position: relative;
+  font-weight: 600; font-size: 1.08rem; min-height: 56px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  font-size: 1.8rem; font-weight: 400; color: var(--fuchsia);
+}
+details[open] summary::after { content: "\2212"; }
+details p { padding: 0 0 22px; color: var(--fg-soft); max-width: 62ch; }
+
+/* Contact */
+.contact { text-align: center; }
+.contact .wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.contact .who { font-family: var(--serif); font-size: 2.4rem; }
+.contact .phone { font-size: 1.7rem; font-weight: 600; letter-spacing: .05em; font-variant-numeric: tabular-nums; user-select: all; }
+footer { padding-block: 44px 56px; text-align: center; background: var(--bg); border-top: 3px solid var(--fuchsia); }
+footer .mono { font-size: 2.2rem; }
+footer p { margin-top: 8px; color: var(--fg-soft); }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="mono" href="#home" aria-label="Olamide and Toluwani, home">O <i>&amp;</i> T</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteNav">
+      <span class="bars" aria-hidden="true"><i></i></span><span id="menuLabel">Menu</span>
+    </button>
+    <nav class="main" id="siteNav" aria-label="Sections">
+      <div class="wrap">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#details">Wedding Details</a></li>
+          <li><a href="#our-story">Our Story</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#getting-there">Getting There</a></li>
+          <li><a href="#parking">Parking</a></li>
+          <li><a href="#gifts">Gift Wishlist</a></li>
+          <li><a href="#colours">Colours</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-bg" id="heroPhoto"><div class="fallback" aria-hidden="true"></div></div>
+    <div class="wrap">
+      <div class="content">
+        <h1 class="names">Olamide Jumoke <span class="amp">&amp;</span> Toluwani Temitayo</h1>
+        <div class="invite">
+          <p>Together with our families, we invite you to celebrate the beginning of our forever.</p>
+          <p>Join us as we celebrate love, friendship and a lifetime of togetherness.</p>
+        </div>
+        <div class="when">
+          <span class="date">Saturday, 14 November 2026</span>
+          <span class="tag">#OlaTayo2026</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn" href="#details">Wedding Details</a>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=7.328814,3.881676" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="details">
+    <div class="wrap">
+      <p class="eyebrow">Wedding Details</p>
+      <h2>Join us on the day</h2>
+      <div class="when-grid">
+        <div class="datebox" aria-label="Saturday, 14 November 2026">
+          <span class="dow">Saturday</span>
+          <span class="day">14</span>
+          <span class="mon">November 2026</span>
+        </div>
+        <div>
+          <div class="schedule">
+            <div class="slot"><span class="time">10:00 AM</span><span class="what">Traditional Engagement</span></div>
+            <div class="slot"><span class="time">12:00 Noon</span><span class="what">Reception</span></div>
+          </div>
+          <div class="place">
+            <span class="label">Venue</span>
+            <span class="pname">Lead City University International Conference Centre</span>
+            <address>Toll Gate, Ibadan, Oyo State.</address>
+            <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=7.328814,3.881676" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band" id="our-story">
+    <div class="wrap">
+      <p class="eyebrow">Our Story</p>
+      <h2>Where it began</h2>
+      <div class="story" style="margin-top:28px">
+        <p>Our story began at Ladoke Akintola University of Technology (LAUTECH), where we shared more than lecture halls and campus life.</p>
+        <p>We attended the same church, Higher Ground Baptist Church, and belonged to the Faculty of Engineering. Olamide studied Food Engineering, while Toluwani studied Computer Engineering and was a year ahead.</p>
+        <p>At church, Toluwani served on the Technical Team, while Olamide was part of the Media Department. It was there that she first caught his attention.</p>
+        <p>But our friendship took a new turn one day when Olamide accompanied Toluwani to the school library to complete his SIWES report. What began as a simple visit grew into conversations, friendship and, eventually, something more.</p>
+        <p>In April 2020, we officially began our relationship.</p>
+        <p>Since then, we have shared years of growth, school experiences, graduations, National Youth Service and many moments that have shaped our lives together.</p>
+        <p>Through it all, we have found love in friendship, strength in each other and joy in growing together.</p>
+        <p>Now, after more than six years together, we look forward to the next chapter.</p>
+        <p class="closing">And so, our forever begins.</p>
+      </div>
+    </div>
+  </section>
+  <section id="gallery">
+    <div class="wrap">
+      <p class="eyebrow">Wedding Gallery</p>
+      <h2>Moments of Ola &amp; Tayo</h2>
+      <div class="grid" id="grid" aria-label="Wedding gallery"></div>
+      <p class="empty-note" id="galleryEmpty" hidden>Our wedding photographs will be shared here soon.</p>
+    </div>
+  </section>
+  <section id="getting-there">
+    <div class="wrap">
+      <p class="eyebrow">Getting There</p>
+      <h2>Finding the venue</h2>
+      <p class="lede" style="margin-top:18px">Lead City University International Conference Centre, Ibadan.</p>
+      <div class="routes">
+        <div class="card route">
+          <h3>From Iwo Road</h3>
+          <ol>
+            <li>Take a bus, cab or bike heading towards Toll Gate.</li>
+            <li>Tell the driver you are going to Lead City University, not just Toll Gate.</li>
+            <li>Alight at Lead City University Main Gate.</li>
+            <li>Once inside the university, ask security personnel for directions to the Conference Centre.</li>
+          </ol>
+        </div>
+        <div class="card route">
+          <h3>From Challenge</h3>
+          <ol>
+            <li>Take a bus, cab or bike heading towards Toll Gate.</li>
+            <li>Confirm that the vehicle passes through Lead City University.</li>
+            <li>Alight at Lead City University Main Gate.</li>
+            <li>Ask security personnel for directions to the Conference Centre.</li>
+          </ol>
+        </div>
+        <div class="card route">
+          <h3>From Toll Gate</h3>
+          <ol>
+            <li>Take a bike or cab to Lead City University, off Oba Otudeko Avenue.</li>
+            <li>Ask to be dropped at the university's Main Gate.</li>
+            <li>Once inside, follow directions to the Conference Centre.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="important"><b>Important:</b> Please tell drivers that your destination is Lead City University, not Toll Gate generally. This will help avoid being dropped at the wrong location.</p>
+      <div class="coords">
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=7.328814,3.881676" target="_blank" rel="noopener">Open in Google Maps</a>
+        <span>Map pin: <code>7.328814, 3.881676</code></span>
+      </div>
+    </div>
+  </section>
+  <section class="band" id="parking">
+    <div class="wrap">
+      <p class="eyebrow">Parking</p>
+      <h2>Where to park</h2>
+      <p class="lede" style="margin-top:18px">Parking is available within the Lead City University premises. Guests can park within the university grounds and proceed to the Conference Centre.</p>
+    </div>
+  </section>
+  <section class="band" id="gifts">
+    <div class="wrap">
+      <p class="eyebrow">Gift Wishlist</p>
+      <h2>A Gift for Our New Home</h2>
+      <div class="gift-intro">
+        <p>Your presence at our celebration means so much to us.</p>
+        <p>As we begin this new chapter, we have put together a wishlist of items that would help us build our home. The list is simply for inspiration; there is no need to select or reserve any item.</p>
+        <p>We are unable to accept physical gifts. Monetary gifts would be most appreciated, and you are welcome to contribute whole or parts of the equivalent value of any item towards our new home.</p>
+      </div>
+
+      <div class="gifts" id="giftList"></div>
+
+      <div class="give">
+        <h3>Monetary gifts</h3>
+        <p class="give-sub">Send your gift to either account below.</p>
+        <ul class="banks">
+          <li class="bank-row">
+            <div class="bank-id">
+              <span class="bank-name">Moniepoint</span>
+              <span class="fld">Account name</span>
+              <span class="acct-name">Toluwani Ajani</span>
+            </div>
+            <div class="bank-num">
+              <span class="fld">Account number</span>
+              <span class="num" id="num1">8117141275</span>
+              <button class="btn copy" type="button" data-target="num1" aria-label="Copy Moniepoint account number">Copy Account Number</button>
+            </div>
+          </li>
+          <li class="bank-row">
+            <div class="bank-id">
+              <span class="bank-name">OPay</span>
+              <span class="fld">Account name</span>
+              <span class="acct-name">Olamide Adeagbo</span>
+            </div>
+            <div class="bank-num">
+              <span class="fld">Account number</span>
+              <span class="num" id="num2">8067984242</span>
+              <button class="btn copy" type="button" data-target="num2" aria-label="Copy OPay account number">Copy Account Number</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <p class="note" id="copyStatus" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+  <section class="band" id="colours">
+    <div class="wrap">
+      <p class="eyebrow">The palette</p>
+      <h2>Colours of the Day</h2>
+      <div class="swatches">
+        <div class="sw"><span class="dot" style="background:#E0208A"></span><span><b>Hot Pink / Fuchsia</b></span></div>
+        <div class="sw"><span class="dot" style="background:#A3B392"></span><span><b>Sage Green</b></span></div>
+        <div class="sw"><span class="dot" style="background:#EBD5C0"></span><span><b>Champagne / Nude</b></span></div>
+        <div class="sw"><span class="dot" style="background:#F8D3DE"></span><span><b>Baby Pink / Blush</b></span></div>
+        <div class="sw"><span class="dot" style="background:#FFFFFF"></span><span><b>White</b></span></div>
+      </div>
+      <p class="note">These colours represent the wedding palette. They are not a mandatory dress code.</p>
+    </div>
+  </section>
+  <section id="faqs">
+    <div class="wrap">
+      <p class="eyebrow">FAQs</p>
+      <h2>Good to know</h2>
+      <div class="faq">
+        <details><summary>Is attendance open to friends and family?</summary><p>Absolutely! Our celebration is open to our friends, family and loved ones. We look forward to celebrating with you.</p></details>
+        <details><summary>Can I bring my children?</summary><p>Yes! Children are welcome. We'd be delighted to have them celebrate with us.</p></details>
+        <details><summary>Is there parking available?</summary><p>Yes. Parking is available within the Lead City University premises.</p></details>
+        <details><summary>Can I take photographs?</summary><p>Of course! Feel free to take photographs and capture lovely memories of the day.</p></details>
+        <details><summary>Are physical gifts accepted?</summary><p>We appreciate the thought, but we are unable to accept physical gifts. Monetary gifts would be most appreciated. Please see our <a href="#gifts">Gift Wishlist</a> section for details.</p></details>
+        <details><summary>Who can I contact if I need help finding the venue?</summary><p>Please contact Flora on 08117141275 for directions or any assistance.</p></details>
+      </div>
+    </div>
+  </section>
+  <section class="band contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Need help finding the venue?</h2>
+      <p style="margin-top:10px">Please contact</p>
+      <p class="who">Flora</p>
+      <p class="phone">08117141275</p>
+      <div class="btn-row" style="justify-content:center;margin-top:10px">
+        <a class="btn" href="tel:+2348117141275">Call Flora</a>
+        <button class="btn ghost copy" type="button" data-target-text="08117141275" aria-label="Copy Flora's phone number">Copy Number</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="mono" href="#home">O <i>&amp;</i> T</a>
+  <p>Olamide Jumoke &amp; Toluwani Temitayo &middot; 14 November 2026 &middot; #OlaTayo2026</p>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="close" id="lbClose" type="button" aria-label="Close photo">&times;</button>
+  <button class="prev" id="lbPrev" type="button" aria-label="Previous photo">&#8249;</button>
+  <img id="lbImg" alt="">
+  <button class="next" id="lbNext" type="button" aria-label="Next photo">&#8250;</button>
+  <div class="count" id="lbCount" aria-live="polite"></div>
+</div>
+
+<script>
+(function () {
+  /* ---------- Menu ---------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('siteNav');
+  var menuLabel = document.getElementById('menuLabel');
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuLabel.textContent = open ? 'Close' : 'Menu';
+  }
+  menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+
+  /* ---------- Wishlist ---------- */
+  var icons = {
+    fridge: '<rect x="14" y="5" width="20" height="38" rx="3"/><path d="M14 22h20M18 11v6M18 27v6"/>',
+    airfryer: '<rect x="9" y="12" width="26" height="28" rx="7"/><path d="M35 22h5a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-5M9 22h26"/><circle cx="22" cy="31" r="3"/>',
+    microwave: '<rect x="5" y="12" width="38" height="24" rx="3"/><rect x="10" y="17" width="20" height="14" rx="2"/><path d="M36 18h3M36 24h3M36 30h3"/>',
+    cutlery: '<path d="M15 5v12a4 4 0 0 0 4 4v22M11 5v10M19 5v10M33 43V5c-5 3-6 9-6 15 0 3 2 5 6 5"/>',
+    chair: '<path d="M16 6h16l-2 16H18zM14 24h20v5H14zM24 29v9M14 41l10-3 10 3"/>',
+    power: '<rect x="8" y="12" width="32" height="26" rx="4"/><path d="M21 17l-5 9h7l-3 8 8-11h-7l3-6zM14 8h4M30 8h4"/>',
+    treadmill: '<path d="M8 36h32M12 36l-3 6M36 36l3 6M14 28h22a2 2 0 0 1 2 2v2H12v-2a2 2 0 0 1 2-2zM33 28V8M33 8h-6"/>',
+    vacation: '<circle cx="32" cy="14" r="6"/><path d="M5 34c4-4 8-4 12 0s8 4 12 0 8-4 14 0M5 41c4-4 8-4 12 0s8 4 12 0 8-4 14 0M10 27l9-9 4 4-9 9z"/>',
+    fan: '<circle cx="24" cy="18" r="13"/><circle cx="24" cy="18" r="2.5"/><path d="M24 15.5C22 9 24 7 26 7s3 3-2 8.5zM26.4 19c6.500-1.500 8.500.500 8.500 2.500s-3 3-8.500-2.500zM22 19.800C17 25 14.500 24 13.500 22.200s1-3.800 8.500-2.400zM24 31v8M16 42h16"/>'
+  };
+  var items = [
+    ['Double-door refrigerator', '450,000', 'fridge'],
+    ['Air fryer', '50,000', 'airfryer'],
+    ['Microwave', '65,000', 'microwave'],
+    ['Cutlery set', '20,000', 'cutlery'],
+    ['Ergonomic chair', '200,000', 'chair'],
+    ['itel Power Tank 1000W', '600,000', 'power'],
+    ['Walking pad treadmill', '270,000', 'treadmill'],
+    ["Couples' vacation / resort stay", '500,000', 'vacation'],
+    ['Rechargeable mist fan', '145,000', 'fan']
+  ];
+  var list = document.getElementById('giftList');
+  items.forEach(function (it) {
+    var d = document.createElement('div');
+    d.className = 'card gift';
+    d.innerHTML = '<div class="ico" aria-hidden="true"><svg viewBox="0 0 48 48">' + icons[it[2]] + '</svg></div>' +
+      '<div class="name"></div><div class="price">&#8358;' + it[1] + '</div>';
+    d.querySelector('.name').textContent = it[0];
+    list.appendChild(d);
+  });
+
+  /* ---------- Copy buttons ---------- */
+  var status = document.getElementById('copyStatus');
+  function selectText(el) {
+    try {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    } catch (e) {}
+  }
+  function flash(btn, ok, msg) {
+    var old = btn.dataset.label || btn.textContent;
+    btn.dataset.label = old;
+    btn.textContent = ok ? 'Copied ✓' : 'Press and hold to copy';
+    btn.classList.toggle('done', ok);
+    status.textContent = msg;
+    setTimeout(function () { btn.textContent = old; btn.classList.remove('done'); }, 2200);
+  }
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = btn.dataset.target ? document.getElementById(btn.dataset.target) : null;
+      var text = el ? el.textContent.trim() : btn.dataset.targetText;
+      var done = function () { flash(btn, true, 'Number ' + text + ' copied.'); };
+      var fail = function () { if (el) selectText(el); flash(btn, false, 'Number selected. Press and hold it to copy.'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fail);
+      } else { fail(); }
+    });
+  });
+
+  /* ---------- Gallery + lightbox ---------- */
+  var COUNT = 9;
+  var grid = document.getElementById('grid');
+  var empty = document.getElementById('galleryEmpty');
+  var photos = [];     // successfully loaded {src, alt}
+  var pending = COUNT;
+  function src(i) { return 'photos/photo-' + (i < 10 ? '0' : '') + i + '.jpg'; }
+
+  function finish() {
+    pending--;
+    if (pending === 0 && photos.length === 0) { grid.hidden = true; empty.hidden = false; }
+  }
+  for (var i = 1; i <= COUNT; i++) {
+    (function (n) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'View photo ' + n + ' larger');
+      var img = new Image();
+      img.alt = 'Olamide and Toluwani, wedding photograph ' + n;
+      img.loading = 'lazy'; img.decoding = 'async';
+      img.onload = function () {
+        photos.push(n);
+        btn.appendChild(img);
+        btn.dataset.num = n;
+        var siblings = Array.prototype.slice.call(grid.children);
+        var next = null;
+        for (var s = 0; s < siblings.length; s++) {
+          if (parseInt(siblings[s].dataset.num, 10) > n) { next = siblings[s]; break; }
+        }
+        if (next) { grid.insertBefore(btn, next); } else { grid.appendChild(btn); }
+        if (n === Math.min.apply(null, photos)) setHero(img.src, img.alt);
+        btn.addEventListener('click', function () { openLb(n); });
+        finish();
+      };
+      img.onerror = function () { finish(); };
+      img.src = src(n);
+    })(i);
+  }
+  function setHero(url, alt) {
+    var box = document.getElementById('heroPhoto');
+    var old = box.querySelector('img');
+    var im = old || document.createElement('img');
+    im.src = url; im.alt = alt;
+    if (!old) { box.insertBefore(im, box.firstChild); box.querySelector('.fallback').hidden = true; }
+  }
+
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCount = document.getElementById('lbCount');
+  var cur = 0, opener = null;
+  function sorted() { return photos.slice().sort(function (a, b) { return a - b; }); }
+  function show(idx) {
+    var s = sorted(); if (!s.length) return;
+    cur = (idx + s.length) % s.length;
+    lbImg.src = src(s[cur]);
+    lbImg.alt = 'Olamide and Toluwani, wedding photograph ' + s[cur];
+    lbCount.textContent = (cur + 1) + ' of ' + s.length;
+  }
+  function openLb(n) {
+    opener = document.activeElement;
+    lb.hidden = false; document.documentElement.style.overflow = 'hidden';
+    show(sorted().indexOf(n));
+    document.getElementById('lbClose').focus();
+  }
+  function closeLb() {
+    lb.hidden = true; document.documentElement.style.overflow = '';
+    if (opener && opener.focus) opener.focus();
+  }
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', function () { show(cur - 1); });
+  document.getElementById('lbNext').addEventListener('click', function () { show(cur + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) { if (e.key === 'Escape') setMenu(false); return; }
+    if (e.key === 'Escape') closeLb();
+    else if (e.key === 'ArrowLeft') show(cur - 1);
+    else if (e.key === 'ArrowRight') show(cur + 1);
+    else if (e.key === 'Tab') {
+      var f = lb.querySelectorAll('button'); var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+  var tx = null;
+  lbImg.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+  lbImg.addEventListener('touchend', function (e) {
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 45) show(cur + (dx < 0 ? 1 : -1));
+  });
+})();
+</script>
+
+</body>
+</html>
